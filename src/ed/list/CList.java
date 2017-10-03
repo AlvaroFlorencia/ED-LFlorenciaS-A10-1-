@@ -63,16 +63,32 @@ public class CList <T> {
     public void showList(){
         if(!isEmpty()){
               pointer=pivot;
-    System.out.println("->");
-    for(int i= 1; i<length;i++){  //Se corrre el arreglo 
+    System.out.println("start->");
+    for(int i= 0; i<length;i++){  //Se corrre el arreglo 
         System.out.println("["+pointer.data.toString() + "]->"); //Se van mostrando los datos
         pointer=pointer.next; //Se va moviendo el puntero
     }
-    System.out.println("<-");
+    System.out.println("<-end");
         }
         else{
             System.out.println("No data in the list"); //Si está vacía no se muestran datos
         }
+        pointer=null;
+    }
+    public void showListbyAddress(){
+        if(!isEmpty()){
+              pointer=pivot;
+    System.out.println("start->");
+    for(int i= 1; i<length;i++){  //Se corrre el arreglo 
+        System.out.println("["+pointer.toString() + "]->"); //Se va mostrando la información del apuntaor
+        pointer=pointer.next; //Se va moviendo el puntero
+    }
+    System.out.println("<-end");
+        }
+        else{
+            System.out.println("No data in the list"); //Si está vacía no se muestran datos
+        }
+        pointer=null;
     }
     
 }

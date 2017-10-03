@@ -16,6 +16,16 @@ public class EDList {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        CList CircleList = new CList(5);
+        CircleList.insert(7);
+        CircleList.showList();
+        CircleList.insert(9);
+        CircleList.showList();
+        CircleList.deleteNode(9);
+        CircleList.showList();
+        CircleList.deleteList();
+        CircleList.showList();
+        CircleList.showListbyAddress();
     }
     
 }
